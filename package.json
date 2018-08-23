@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mapbox/dyno.git"
+    "url": "git://github.com/life-without-barriers/dyno.git"
   },
   "bugs": {
     "url": "https://github.com/mapbox/dyno/issues"
