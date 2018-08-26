@@ -70,9 +70,14 @@ function Dyno(options) {
     accessKeyId: options.accessKeyId,
     secretAccessKey: options.secretAccessKey,
     sessionToken: options.sessionToken,
-    logger: options.logger,
     maxRetries: options.maxRetries
   };
+
+  // Only set logger if the option is supplied otherwise
+  // a prop with an undefined value with disable the setting in AWS.config
+  if(options.logger) {
+    config.logger = options.logger;
+  }
 
   var client = new AWS.DynamoDB(config);
   var docClient = new AWS.DynamoDB.DocumentClient({ service: client });
